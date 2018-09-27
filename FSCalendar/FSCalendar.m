@@ -20,6 +20,7 @@
 #import "FSCalendarTransitionCoordinator.h"
 #import "FSCalendarCalculator.h"
 #import "FSCalendarDelegationFactory.h"
+#import "FSCalendarUtils.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -1225,6 +1226,11 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     if (!_minimumDate || !_maximumDate) {
         return;
     }
+    
+    if(![FSCalendarUtils betweenDate:date minDate:_minimumDate maxDate:_maximumDate]) {
+        return ;
+    }
+    
     animated &= _scrollEnabled; // No animation if _scrollEnabled == NO;
     
     date = [self.calculator safeDateForDate:date];
