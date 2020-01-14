@@ -300,6 +300,8 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+
+    [_collectionViewLayout invalidateLayout];
     
     if (_needsAdjustingViewFrame) {
         _needsAdjustingViewFrame = NO;
