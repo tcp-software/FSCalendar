@@ -207,7 +207,7 @@
             if ((indexPath.item == 0 || indexPath.item == [self.collectionView numberOfItemsInSection:0] - 1)) {
                 text = nil;
             } else {
-                NSDate *firstPage = [self.calendar.gregorian fs_middleDayOfWeek:self.calendar.minimumDate];
+                NSDate *firstPage = [self.calendar.gregorian fs_lastDayOfWeek:self.calendar.minimumDate];
                 NSDate *date = [self.calendar.gregorian dateByAddingUnit:NSCalendarUnitWeekOfYear value:indexPath.item-1 toDate:firstPage options:0];
                 text = [_calendar.formatter stringFromDate:date];
             }
