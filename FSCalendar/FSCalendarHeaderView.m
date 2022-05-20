@@ -196,6 +196,7 @@
                 } else {
                     NSDate *date = [self.calendar.gregorian dateByAddingUnit:NSCalendarUnitMonth value:indexPath.item-1 toDate:self.calendar.minimumDate options:0];
                     text = [_calendar.formatter stringFromDate:date];
+                    [cell.titleLabel setAccessibilityIdentifier: @"calendar.header"];
                 }
             } else {
                 NSDate *date = [self.calendar.gregorian dateByAddingUnit:NSCalendarUnitMonth value:indexPath.item toDate:self.calendar.minimumDate options:0];
@@ -210,6 +211,7 @@
                 NSDate *firstPage = [self.calendar.gregorian fs_lastDayOfWeek:self.calendar.minimumDate];
                 NSDate *date = [self.calendar.gregorian dateByAddingUnit:NSCalendarUnitWeekOfYear value:indexPath.item-1 toDate:firstPage options:0];
                 text = [_calendar.formatter stringFromDate:date];
+                [cell.titleLabel setAccessibilityIdentifier: @"calendar.header"];
             }
             break;
         }

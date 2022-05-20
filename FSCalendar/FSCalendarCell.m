@@ -255,6 +255,12 @@
     _eventIndicator.numberOfEvents = self.numberOfEvents;
     _eventIndicator.color = self.colorsForEvents;
 
+    // Accessibility identifiers
+    if (self.placeholder) {
+        [_titleLabel setAccessibilityIdentifier:@"calendar.placeholderDay"];
+    } else {
+        [_titleLabel setAccessibilityIdentifier:@"calendar.validDay"];
+    }
 }
 
 - (UIColor *)colorForCurrentStateInDictionary:(NSDictionary *)dictionary
