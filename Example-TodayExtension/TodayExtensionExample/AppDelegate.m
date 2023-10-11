@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  Example-TodayExtension
 //
-//  Created by dingwenchao on 9/8/16.
+//  Created by dingwenchao on 9/6/16.
 //  Copyright © 2016 dingwenchao. All rights reserved.
 //
 

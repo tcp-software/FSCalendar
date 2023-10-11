@@ -19,6 +19,7 @@ DerivedData
 *.hmap
 *.ipa
 *.idea
+.swiftpm/
 
 # Bundler
 .bundle
@@ -29,3 +30,5 @@ Carthage/Build
 
 fastlane/report.xml
 fastlane/screenshots
+
+Index/
