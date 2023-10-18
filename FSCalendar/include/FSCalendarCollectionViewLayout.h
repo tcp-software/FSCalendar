@@ -1,1 +1,1 @@
-/Users/milanbibeskovic/Documents/workspace/iOS/FSCalendar/FSCalendar/FSCalendarCollectionViewLayout.h
+../FSCalendarCollectionViewLayout.h
